@@ -1,0 +1,31 @@
+<html>
+    <head>
+      <title> Formulario 1 </title>
+      <script LANGUAGE="JavaScript">
+        function calcula(form)
+        {
+        	if (confirm("está seguro?"))
+        		form.resultado.value=eval(form.expr.value);
+        	else
+        		alert("vuelva a intentarlo");
+        }
+        </script>
+        <noscript>
+        	<meta HTTP-EQUIV=REFRESH CONTENT=0;URL=pru1.htm>
+        </noscript>
+    </head>
+    <BODY BGCOLOR="#00AA00" TEXT="#FFFFFF" LINK="#0000FF" VLINK="#0000FF" ALINK="#0000FF">
+		<CENTER> <H1> Calculadora </H1> 
+			<BR>
+			<FORM>
+			Introduzca expresión: 
+				<INPUT TYPE="text" NAME="expr" SIZE=15> 
+				<INPUT TYPE="button" VALUE="Calcular" onClick="calcula(this.form)"> 
+			<BR> 
+			Resultado: 
+				<INPUT TYPE="text" NAME "resultado" SIZE=15> 
+			<BR> 
+			</FORM>
+		</CENTER> 
+	</BODY> 
+</html>

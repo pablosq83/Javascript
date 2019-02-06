@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejemplo 6 </title>
+	<script>
+	/*  Script que visualiza un reloj digital en la página web
+	    Autor: Pablo Sulbarán (psulbaran@cenditel.gob.ve)
+	    Fecha: 30-01-2019	*/
+	function VerHora()
+	{
+		var mihora = new Date();
+		var horas = mihora.getHours().toString();
+		var minutos = mihora.getMinutes().toString();
+		if (minutos.length == 1) 
+		{
+			minutos = "0" + minutos;
+		}
+		var segundos = mihora.getSeconds().toString();
+		if (segundos.length == 1) 
+		{
+			segundos = "0" + segundos;
+		}
+		document.forms[0].mireloj.value = horas + ":" + minutos + ":" + segundos;
+	}
+	</script>
+</head>
+<body>
+	<form>
+		<p align="center">
+			<input type="text" size = "10" name="mireloj">
+		</p>
+	</form>
+	<script>
+		var r = setInterval("VerHora()", 500);
+	</script>
+</body>
+</html>

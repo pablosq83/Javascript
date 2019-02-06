@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejemplo 4 </title>
+	<script language="Javascript">
+		/* Programa que confirma si se puede acceder a una página
+		Autor: Pablo Sulbarán (psulbaran@cenditel.gob.ve)
+		Fecha: 24-01-2019 */
+		function confirmar ()
+		{
+		    return confirm ("Esta página tiene contenido restringido a mayores de 18 años")
+		}
+	</script>
+</head>
+<body>
+    <a href="http://www.starwars.com" onclick="return confirmar()"> Enlace a la página oficial de starwars </a>
+</body>
+</html>

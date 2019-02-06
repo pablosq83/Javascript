@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejemplo 7 </title>
+	<script language="Javascript">
+	    /* Script que muestra una galería de imágenes
+	       Autor: Pablo Sulbarán (psulbaran@cenditel.gob.ve)
+	       Fecha: 30-01-2019 */
+	    function ver_imagen()
+	    {
+	    	if (!document.image) 
+	    	{
+	    		return document.images.img.src = document.imagenes.imagen.options[document.imagenes.imagen.selectedIndex].value
+	    	}
+	    }	
+	</script>
+<body>
+    <form name="imagenes">
+    	<select name="imagen" size="1" onchange="ver_imagen()">
+    		<option> Elige imagen </option>
+    		<option value="img1.jpg"> 1 </option>
+    		<option value="img2.jpg"> 2 </option>
+    		<option value="img3.jpg"> 3 </option>
+    	</select>
+    </form>
+    <img src="img1.jpg" name="img" width=600 height=436 border="3">
+</body>
+</head>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejemplo 10 </title>
+	<script language="Javascript">
+	    /* Script que muestra mensajes en movimiento en la barra del navegador
+	       Autor: Pablo Sulbarán (psulbaran@cenditel.gob.ve)
+	       Fecha: 01 - 02 - 2019 */
+		var timed = 0;
+		var scrollGo = false;
+		var delay = 100;
+		var space = 100;
+
+		function scroll_start()
+		{
+			var i = 0;
+			msg = "Este es el mensaje mostrado en la barra de estado";
+			for (var i = 0; i < space; ; i++) 
+			{
+                msg = "" + msg;
+                scrollGo = true;
+                timerid = window.setTimeout(scrollmsg(0), delay);
+			}
+        }
+
+        function scroll_msg (pos) 
+        {
+        	var out = "";
+        	scrollGo = false;
+        	if (pos < msg.length) 
+        	{
+        		self.status = msg.substring (pos, msg.length);
+        	else
+        		pos = -1;
+        	++pos;
+        	}
+        	scrollGo = true;
+        	timerid = window.setTimeout("scrollmsg("pos")", delay)
+
+        }
+	</script>
+<body onload="scroll_start();">
+
+</body>
+</html>

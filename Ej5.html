@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejemplo 5 </title>
+    <script language="Javascript">
+    /*  Script que muestra ventanas pop-ups cada cierto tiempo
+        Autor: Pablo Sulbarán (psulbaran@cenditel.gob.ve)
+        Fecha: 24-01-2019 */
+    	function abrir_ventana()
+    	{
+    		window.open("http://cnice.mec.es");
+    	}
+    	function parar_abrir()
+    	{
+    		clearTimeout(pop);
+    	}
+    	pop = setInterval ("abrir_ventana()",10000); // 10000 milisegundos
+    </script>    
+</head>
+<body>
+	<input type="button" value="Dejar de abrir ventanas" onclick="parar_abrir()">
+</body>
+</html>
